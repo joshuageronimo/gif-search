@@ -20,10 +20,5 @@ app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
 
-app.get('/greetings/:name', function (req, res) {
-  var name = req.params.name;
-  res.render('greetings', {name: name});
-});
-
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
